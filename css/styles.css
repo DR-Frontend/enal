@@ -1,0 +1,396 @@
+/****** VIDEO */
+.v-header{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.fullScreen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.fullScreen video{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	min-height: 100%;
+}
+.encabezado{
+    width: 100%;
+    height: max-content;
+    background-color: var(--bkgDark);
+    z-index: 999;
+    transition: all .3s ease;
+}
+.encabezado h1{
+    padding: 2rem 0;
+    color: var(--white);
+    font-size: 2.5rem;
+}
+.encabezado:hover{
+    transform: scale(1.2);
+}
+.encabezado:hover h1{
+    color: var(--bkgPrincipal);
+}
+
+
+/****** MENU */
+header{
+    width: 100%;
+    height: 80px;
+    padding: .5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:var(--bkgDark);
+    order: -1;
+    z-index: 999;
+}
+header a img{
+    width: 150px;
+    margin: .5rem;
+}
+header label:hover{
+    cursor: pointer;
+}
+header label img{
+    width: 50px;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+}
+header #btn-menu{
+    display: none;
+}
+header .menu ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+header .menu ul li a{
+    display: block;
+    margin: .2rem;
+    width: 300px;
+    padding: 1rem 0;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: var(--white);
+    background: var(--lightWhite);
+    text-transform: uppercase;
+}
+header .menu{
+    position: absolute;
+    width: 100%;
+    right: 100%;
+    background: var(--bkgDark);
+    padding-bottom: 1rem;;
+    transition: all .3s ease;
+}
+header .menu ul{
+    flex-direction: column;
+}
+#btn-menu:checked ~ .menu{
+    right: 0;
+}
+
+
+
+/****** NOSOTROS */
+#nosotros{
+    padding: 1.5rem;
+    background-color: var(--bkgPrincipal);
+}
+#nosotros img{
+    width: 100%;
+}
+
+
+
+/****** CLIENTES */
+#clientes .images .imgClient img{
+    width: calc(100vw / 3);
+    margin: 1rem;
+}
+
+
+
+/****** PROYECTOS */
+#proyectos{
+    padding: 2rem;
+    background-color: var(--bkgPrincipal);
+}
+#proyectos hr{
+    margin: 2rem 0;
+}
+#proyectos .anc1{
+    background-image: url("../img/anc1.png");
+}
+#proyectos .anc2{
+    background-image: url("../img/anc2.png");
+}
+#proyectos .anc3{
+    background-image: url("../img/anc3.png");
+}
+
+
+
+/****** SLOGAN */
+#slogan{
+    padding: 1.5rem;
+    background-color: var(--dark);
+}
+#slogan h1,
+#slogan p{
+    color: #fff;
+}
+
+
+
+/****** GALERIA */
+#galeria{
+    overflow-y: scroll;
+}
+#galeria img{
+    height: 350px;
+    width: 100%;
+}
+
+
+/****** MAPS */
+#maps iframe{
+    width: 90vw;
+}
+
+
+
+/****** FOOTER */
+footer{
+    padding: 1.5rem;
+    background-color: var(--dark);
+    color: var(--white);
+}
+footer h1,
+footer .adress ul li:nth-child(1),
+footer .works ul li:nth-child(1),
+footer .links ul li:nth-child(1),
+footer .copy p:nth-child(2) a{
+    color: var(--bkgPrincipal);
+}
+footer p,
+footer li,
+footer a{
+    color: var(--white);
+}
+footer p,
+footer ul{
+    margin: 1.5rem;
+}
+footer .investment .btn{
+    color: var(--bkgPrincipal);
+    border-color: var(--bkgPrincipal);
+}
+footer .investment .btn:hover{
+    color: var(--dark);
+    background: var(--bkgPrincipal);
+}
+footer .links ul li a,
+footer .copy p a{
+    text-decoration: none;
+}
+footer .copy p:nth-child(2){
+    font-size: .8rem;
+}
+
+
+
+
+
+
+
+
+
+/*************** DESKTOP */
+@media(min-width: 64rem){
+    
+    /****** MENU */
+    .encabezado h1{
+        line-height: .9;
+        font-size: 7rem;
+    }
+    header label img{
+        display: none;
+    }
+    header .menu{
+        margin: 1.5rem 1rem 0 0;
+        background-color: rgba(0,0,0,0);
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        justify-content: flex-end;
+    }
+    header .menu ul{
+        flex-direction: row;
+    }
+    header .menu ul li a{
+        width: inherit;
+        padding: .5rem 1rem;
+        text-transform: capitalize;
+        background-color: rgba(0,0,0,0);
+        transition: all .3s ease;
+    }
+    header .menu ul li a:hover{
+        background: var(--white);
+        color: var(--black);
+    }
+
+    
+
+
+
+    /****** NOSOTROS */
+    #nosotros{
+        padding: 4rem 2rem;
+        align-items: center;
+    }
+    #nosotros h1{
+        font-size: 4rem;;
+        padding: 1rem;
+        width: 100%;
+    }
+    #nosotros img{
+        padding: 1rem;
+        width: 50%;
+    }
+    #nosotros p{
+        width: 50%;
+    }
+
+
+
+    /****** CLIENTES */
+    #clientes{
+        padding: 2rem 1rem;
+    }
+    #clientes h1{
+        font-size: 4rem;
+        width: 100%;
+    }
+    #clientes .images .imgClient img{
+        width: calc(90vw / 14);
+        transition: all .3s ease;
+    }
+    #clientes .images .imgClient img:hover{
+        transform: scale(1.3);
+    }
+
+
+
+    /****** PROYECTOS */
+    #proyectos{
+        padding: 0;
+    }
+    #proyectos div{
+        width: 50%;
+    }
+    #proyectos hr{
+        display: none;
+    }
+    #proyectos div:nth-child(1){
+        border: 1rem solid var(--white);
+        padding: 4rem 3rem;
+        order: 1;
+    
+    }
+    #proyectos div:nth-child(1) h1,
+    #proyectos div:nth-child(1) p{
+        text-align: left;
+    }
+    #proyectos div:nth-child(2){
+        order: 2;
+    }
+    #proyectos div:nth-child(3){
+        order: 3;
+    }
+    #proyectos div:nth-child(4){
+        border: 1rem solid var(--white);
+        padding: 4rem 3rem;
+        order: 5;
+    }
+    #proyectos div:nth-child(4) h1,
+    #proyectos div:nth-child(4) p{
+        text-align: right;
+    }
+    #proyectos div:nth-child(5){
+        order: 4;
+    }
+    #proyectos div:nth-child(6){
+        order: 6;
+    }
+    #proyectos div:nth-child(7){
+        border: 1rem solid var(--white);
+        padding: 4rem 3rem;
+        order: 7;
+    }
+    #proyectos div:nth-child(7) h1,
+    #proyectos div:nth-child(7) p{
+        text-align: left;
+    }
+    #proyectos div:nth-child(8){
+        order: 8;
+    }
+
+    #proyectos div:nth-child(1) h1,#proyectos div:nth-child(4) h1,
+    #proyectos div:nth-child(7) h1{
+        font-size: 4rem;
+    }
+    #proyectos div:nth-child(2),
+    #proyectos div:nth-child(5),
+    #proyectos div:nth-child(8){
+        overflow: hidden;
+        transition: all .3s ease;
+    }
+    #proyectos div:nth-child(2):hover,
+    #proyectos div:nth-child(5):hover,
+    #proyectos div:nth-child(8):hover{
+        transform: scale(1.1);
+    }
+
+
+
+    /****** SLOGAN */
+    #slogan{
+        padding: 3rem;
+    }
+    #slogan h1{
+        width: 100%;
+        font-size: 4rem;
+    }
+
+
+    /****** GALERIA */
+    #galeria img{
+        width: 500px;
+        height: 100%;
+    }
+
+
+    /****** FOOTER */
+    footer .investment p{
+        width: 100%;
+
+    }
+    footer .a123{
+        width: 100%;
+    }
+}

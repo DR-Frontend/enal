@@ -1,0 +1,126 @@
+:root{
+    --bkgPrincipal: #c4d127;
+    --black: #000;
+    --white: #fff;
+    --lightWhite: rgba(255,255,255,.25);
+    --dark: #1d1e26;
+    --bkgDark: rgba(0,0,0,.7);
+}
+@font-face{
+    font-family: 'Titulo';
+    src: url("../font/Raleway-Black.ttf");
+}
+@font-face{
+    font-family: 'Subtitulo';
+    src: url("../font/Raleway-Medium.ttf");
+}
+@font-face{
+    font-family: 'Texto';
+    src: url("../font/Raleway-Regular.ttf");
+}
+@font-face{
+    font-family: 'Link';
+    src: url("../font/Raleway-Thin.ttf")
+}
+h1{
+    font-family: 'Titulo', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: -.1rem;
+}
+h2{
+    font-family: 'Subtitulo', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    line-height: 20px;
+}
+hr{
+    width: 95%;
+    border-color: var(--black);
+    opacity: .3;
+}
+p, span, a, li{
+    font-family: 'Texto', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--black);
+}
+h1, a{
+    margin: 1rem 0;
+}
+li{
+    list-style: none;
+}
+header{
+    position: fixed;
+}
+body{
+    min-width: 350px;
+    max-width: 1980px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.whatsapp{
+    width: 70px;
+    padding: 1.5rem 0;
+    position: fixed;
+    bottom: .5rem;
+    right: 1rem;
+    z-index: 9999;
+    border: 2px solid;
+    border-color: var(--bkgPrincipal);
+    background: var(--dark);
+    border-radius: 2rem;
+    font-size: .6rem;
+    color: var(--bkgPrincipal);
+    text-decoration: none;
+}
+.whatsapp img{
+    position: relative;
+    width: 50px;
+    margin-bottom: .5rem;
+    animation: ring 5s infinite ease-in;
+}
+@keyframes ring{
+    0%{left: 0;}
+    2%{left: 4px;}
+    4%{left: -4px;}
+    6%{left: 1px;}
+    8%{left: -1px;}
+    10%{left: 0;}
+    100%{left: 0;}
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flex_nowrap{
+    display: flex;
+    overflow-x: scroll;
+}
+.btn{
+    display: block;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    border: 1px solid var(--black);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+.btn:hover{
+    background: var(--black);
+    color: var(--bkgPrincipal);
+}
+.proyecto_bkg{
+    width: 100%;
+    min-height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
